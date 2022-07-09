@@ -15,7 +15,7 @@ jobs:
       - run: echo "hello world" # run the `echo` command
 
 
-  create_infrastructure: 
+  create_infra: 
     docker:
       - image: amazon/aws-cli
     steps:
@@ -38,4 +38,4 @@ workflows:
   myWorkflow:
     jobs:
       - build
-      - create_infrastructure
+      - create_infra
