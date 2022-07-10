@@ -58,8 +58,19 @@ jobs:
               return 0
             else 
               return 1
-            fi     
-
+            fi    
+      - run: 
+          name: test job
+          command: return 1
+      - destroy_environment    
+  commands:
+    destroy_environment:
+      steps: 
+        -run:
+           name: Destroy environment
+           when: on_fail
+           command: |
+             aws cloudformation delete-stack --stack-name myStack
 # Sequential workflow
 workflows:
   # Name the workflow
