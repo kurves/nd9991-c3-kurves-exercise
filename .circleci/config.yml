@@ -28,9 +28,37 @@ jobs:
               --stack-name myStack\
               --region us-east-1
 
-
-
-
+  config_infra:
+    docker:
+      - image: python:3.7-alpine3.11
+    steps: 
+      - checkout
+      - add_ssh_keys:
+          fingerprints: ["36:eb:42:f0:25:d0:b5:94:13:1f:cb:b6:41:2e:f8:fc"]
+      - run:
+          name: Install Ansible
+          command: |
+            apk add --update ansible
+      - run:
+          name: Run playbook
+          command: | 
+            ansible-playbook -i inventory.txt main3.yml
+  
+  smoke_test:
+    docker:
+      - image: alpine:latest
+    steps: 
+      - run: apk add --update curl
+      - run:
+          name: smoke test
+          command: |
+            URL="https://blog.udacity.com/"
+            if curl -s --head ${URL}
+            then
+              return 0
+            else 
+              return 1
+            fi     
 
 # Sequential workflow
 workflows:
@@ -39,3 +67,5 @@ workflows:
     jobs:
       - build
       - create_infra
+      - config_infra
+      - smoke_test
