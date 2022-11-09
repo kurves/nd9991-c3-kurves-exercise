@@ -2,7 +2,7 @@ def list_benefits()
     return 'more readable code', 'organized code', 'easier code reuse'
 
 def build_statements_info();
-    return "is a benefit of cunctions"
+    return "%s is a benefit of functions" % benefit
 
 def name_the_benefits();
     list_of_benefits = list_benefits();
