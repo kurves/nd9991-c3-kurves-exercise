@@ -6,5 +6,8 @@ durations = [103, 101, 99, 100, 100, 95, 95, 96, 93,90]
 movie_dict = {"years": years,"durations":durations}
 print(movie_dict)
 
+#create dataframe
+
+durations=pd.DataFrame(movi_dict)
 
 
