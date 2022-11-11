@@ -9,5 +9,6 @@ print(movie_dict)
 #create dataframe
 
 durations=pd.DataFrame(movi_dict)
-
+# print DataFrame
+print(durations)
 
