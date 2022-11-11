@@ -17,3 +17,7 @@ print(durations)
 
 fig=plt.figure()
 plt.plot(years,durations)
+
+#add plot title
+plt.title("A graph of durations against years")
+
