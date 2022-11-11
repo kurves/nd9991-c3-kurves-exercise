@@ -15,3 +15,5 @@ durations=pd.DataFrame(movi_dict)
 # print DataFrame
 print(durations)
 
+fig=plt.figure()
+plt.plot(years,durations)
