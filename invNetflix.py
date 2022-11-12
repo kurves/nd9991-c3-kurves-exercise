@@ -17,7 +17,8 @@ print(durations)
 
 fig=plt.figure()
 plt.plot(years,durations)
-
+# Read csv as a dataFrame
+net_pd = pd.read_csv('datasets'/netflix.csv)
 #show the plot
 plt.show()
 #add plot title
