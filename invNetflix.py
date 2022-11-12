@@ -38,3 +38,5 @@ net_movie-col =net_movie_only[["title","country","genre","release_year","Duratio
 #Create figure and increase size
 
 fig = plt.figure(figsize-12,8)
+# create a scatter plot
+plt.scatter('duration','year')
