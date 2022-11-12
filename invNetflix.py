@@ -24,3 +24,5 @@ plt.show()
 #add plot title
 plt.title("A graph of durations against years")
 
+#create subset for movie
+net_movie_only=net_pd[['type']='movie']
