@@ -43,3 +43,6 @@ plt.scatter('duration','year')
 
 #add title
 plt.scatter(title='Duration vs year')
+
+#show plot
+plt.show()
