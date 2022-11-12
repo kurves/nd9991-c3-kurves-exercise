@@ -18,6 +18,10 @@ print(durations)
 fig=plt.figure()
 plt.plot(years,durations)
 # Read csv as a dataFrame
+
+#print the first rows
+net_pd[0:5]
+
 net_pd = pd.read_csv('datasets'/netflix.csv)
 #show the plot
 plt.show()
