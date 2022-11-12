@@ -30,3 +30,7 @@ plt.title("A graph of durations against years")
 
 #create subset for movie
 net_movie_only=net_pd[['type']='movie']
+
+#select columns
+
+net_movie-col =net_pd[["title","country","genre","release_year","Duration"]]
