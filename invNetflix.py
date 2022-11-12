@@ -33,4 +33,4 @@ net_movie_only=net_pd[['type']='movie']
 
 #select columns
 
-net_movie-col =net_pd[["title","country","genre","release_year","Duration"]]
+net_movie-col =net_movie_only[["title","country","genre","release_year","Duration"]]
