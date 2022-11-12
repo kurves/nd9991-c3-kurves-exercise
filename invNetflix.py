@@ -34,3 +34,7 @@ net_movie_only=net_pd[['type']='movie']
 #select columns
 
 net_movie-col =net_movie_only[["title","country","genre","release_year","Duration"]]
+
+#Create figure and increase size
+
+fig = plt.figure(figsize-12,8)
